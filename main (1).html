@@ -1,0 +1,60 @@
+<p>el nino clicker</p>
+
+<h1>el nino </h1> <div class="results"></div>
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+'use strict';
+document.addEventListener('keydown', (event) => {
+  const keyName = event.key;
+
+  if (keyName === 'Space') {
+    // do not alert when only Control key is pressed.
+    return;
+  }
+
+  if (event.spaceKey) {
+    // Even though event.key is not 'Control' (e.g., 'a' is pressed),
+    // event.ctrlKey may be true if Ctrl key is pressed at the same time.
+    alert(`Combination of spaceKey + ${keyName}`);
+    var nino = nino +1
+  } else {
+    var js = nino +1
+    alert(`Key pressed ${keyName}`);
+
+  }
+}, false);
+
+document.addEventListener('keyup', (event) => {
+  const keyName = event.key;
+
+  // As the user releases the Ctrl key, the key is no longer active,
+  // so event.ctrlKey is false.
+  if (keyName === 'Space') {
+    alert('Control key was released');
+  }
+}, false);
+
+</script>
+</head>
+
+<body>
+</body>
+</html>
+
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Setting HTML content example</title>
+</head>
+<body>
+  <!-- This <input> field is where I'm getting the name from -->
+  <label>Enter your name: <input class="name" type="text" value="World"/></label>
+  
+  <!-- Plain Javascript Example -->
+  <h1>el ninos</h1> <span class="jsValue"></span>
+  
+  <!-- jQuery Example -->
